@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Smooch_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 const smoochSans = Smooch_Sans({
   subsets: ["latin"],
@@ -21,10 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${smoochSans.className} antialiased mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-6 space-y-14`}
+        className={`${smoochSans.className} antialiased mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 space-y-14`}
       >
         <Nav/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
