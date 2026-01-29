@@ -22,10 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${smoochSans.className} antialiased mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 space-y-14`}
+        className={`${smoochSans.className} antialiased mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 space-y-14 min-h-screen flex flex-col`}
       >
         <Nav/>
-        {children}
+        <div className="flex-1">
+          {children}</div>
         <Footer/>
       </body>
     </html>
